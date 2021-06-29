@@ -1,11 +1,11 @@
 const server = require('express').Router();
-const { findAllUser } = require("../controllers/user.js");
+const { getAllPosts } = require("../controllers/post.js")
 
 
 server.get('/', (req, res, next) => {
-    findAllUser()
-        .then(users => {
-            res.send(users);
+    getAllPosts()
+        .then(posts => {
+            res.send(posts.data)
         })
         .catch(error => {
             console.log(error)

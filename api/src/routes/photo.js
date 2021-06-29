@@ -1,11 +1,11 @@
 const server = require('express').Router();
-const { findAllUser } = require("../controllers/user.js");
+const { getAllPhotos } = require("../controllers/photo.js")
 
 
 server.get('/', (req, res, next) => {
-    findAllUser()
-        .then(users => {
-            res.send(users);
+    getAllPhotos()
+        .then(photos => {
+            res.send(photos.data)
         })
         .catch(error => {
             console.log(error)

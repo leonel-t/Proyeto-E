@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from './../../components/NavBar/NavBar';
 
-const Home = () => {
+const Photos = () => {
     return (
         <div>
             <NavBar/>
-            Boilerplate!!!
+            Photos!!!
         </div>
     );
 }
-export default Home;
+export default Photos;
