@@ -1,8 +1,9 @@
 const server = require('express').Router();
-const { getAllPhotos } = require("../controllers/photo.js")
+const { getAllPhotos } = require("../controllers/photo.js");
+const checkJWT = require('../middlewares/jwt.js');
 
 
-server.get('/', (req, res, next) => {
+server.get('/',checkJWT, (req, res, next) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) ||10;
     getAllPhotos()

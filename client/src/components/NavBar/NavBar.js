@@ -13,15 +13,14 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/posts">Posts</Link>
+                                <Link className="nav-link" to="/posts">Posts</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/photos">Photos</Link>
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <button className="btn btn-outline-primary mx-1">Login</button>
-                            <button className="btn btn-outline-success mx-1">Signup</button>
+                            <button className="btn btn-outline-success mx-1">Login</button>
                             {/* <button className="btn btn-outline-danger mx-1">Logout</button> */}
 
 

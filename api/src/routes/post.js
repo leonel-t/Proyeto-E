@@ -1,8 +1,9 @@
 const server = require('express').Router();
-const { getAllPosts } = require("../controllers/post.js")
+const { getAllPosts } = require("../controllers/post.js");
+const checkJWT = require('../middlewares/jwt.js');
 
 
-server.get('/', (req, res, next) => {
+server.get('/',checkJWT, (req, res, next) => {
     getAllPosts()
         .then(posts => {
             res.send(posts.data)
