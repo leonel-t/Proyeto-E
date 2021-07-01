@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes/index.js');
+const cors = require("cors")
 
 const server = express();
 
@@ -15,6 +16,7 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use(cors());
 server.use('/', routes);
 
 // Error catching endware.

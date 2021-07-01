@@ -6,6 +6,7 @@ const { JWT_SECRET } = process.env;
 const checkJWT = (req, res, next) => {
     try {
         const { authorization } = req.headers;
+        console.log(req.headers);
         const decoded = jwt.verify(authorization.split(' ')[1],JWT_SECRET);
         // const [usuario] = listaUsuarios.filter(u => u.id === decoded.id);
         // if (!usuario || !usuario.activo) {

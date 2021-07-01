@@ -6,7 +6,7 @@ const NavBar = () => {
         <div>
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">WhatApp!</Link>
+                    <Link className="navbar-brand">WhatApp!</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -20,7 +20,7 @@ const NavBar = () => {
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <button className="btn btn-outline-success mx-1">Login</button>
+                            <Link className="btn btn-outline-success mx-1" to="/login">Login</Link>
                             {/* <button className="btn btn-outline-danger mx-1">Logout</button> */}
 
 

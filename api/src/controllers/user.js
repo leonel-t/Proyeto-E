@@ -16,7 +16,7 @@ module.exports = {
         });
         if (exist) {
             return new Promise((res, rej) => {
-                res('user exist')
+                rej('user exist')
             })
         }
         const hashedPW = await bcrypt.hash(user.password, 10);

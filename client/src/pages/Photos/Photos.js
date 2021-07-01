@@ -8,7 +8,7 @@ const Photos = () => {
     const [page, setPage] = useState(1);
     const [data, setData] = useState([]);
     useEffect(async () => {
-        const { data } = await axios.get(`http://localhost:3001/photos?page=${page}&limit=${limit}`);
+        const { data } = await axios.get(`http://localhost:3001/photos?page=${page}&limit=${limit}`,{headers:{authorization: `Bearer ${sessionStorage.Token || "0"}`}});
         setData(data);
     }, [page]);
 

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+
+const Register = () => {
     const history = useHistory();
     const [input, setInput] = useState({
         email: "",
@@ -16,10 +17,9 @@ const Login = () => {
     };
     const handleSubmit = function (e) {
         e.preventDefault();
-        axios.post("http://localhost:3001/users/login", { email: input.email, password: input.password })
-            .then(data => {
-                sessionStorage.Token = data.data
-                history.push("/");
+        axios.post("http://localhost:3001/users/register", { email: input.email, password: input.password })
+            .then(() => {
+                history.push("/login");
             })
             .catch(error => {
                 console.log(error)
@@ -43,8 +43,8 @@ const Login = () => {
                                 <input type="password" className="form-control" name="password" onChange={handleInputChange} value={input.password} />
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-primary mb-3">Login</button>
-                        <p className="d-flex justify-content-end" >You do not have an account?<Link to="/register" >Sign up</Link>
+                        <button type="submit" className="btn btn-primary mb-3">Register</button>
+                        <p className="d-flex justify-content-end" >Do you already have an account?<Link to="/login" >Login</Link>
                         </p>
                     </div>
                 </div>
@@ -52,4 +52,4 @@ const Login = () => {
         </div>
     );
 }
-export default Login;
+export default Register;
