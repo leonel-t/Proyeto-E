@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import NavBar from './../../components/NavBar/NavBar';
 import Photo from './../../components/Photo/Photo';
 
 const Photos = () => {
@@ -14,7 +13,6 @@ const Photos = () => {
 
     return (
         <div>
-            <NavBar />
             {data.length ? (
                 <div>
                     <div className="container-fluid">

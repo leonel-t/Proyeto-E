@@ -20,6 +20,7 @@ const Login = () => {
             .then(data => {
                 sessionStorage.Token = data.data
                 history.push("/");
+                location.reload();
             })
             .catch(error => {
                 console.log(error)
