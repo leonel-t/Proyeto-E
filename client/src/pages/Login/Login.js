@@ -23,7 +23,8 @@ const Login = () => {
                 location.reload();
             })
             .catch(error => {
-                console.log(error)
+                console.log(error);
+                alert("An error has occurred, please try again.");
             })
     }
 
